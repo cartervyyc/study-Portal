@@ -33,6 +33,21 @@ body {
   float: right;
 }
 
+@media (max-width: 800px) {
+  .navbar {
+    display: flex;
+  }
+
+  .navbar li {
+    margin: 5px;
+  }
+}
+
+#markdown-header {
+  font-size: 18.72px;
+  text-align: left;
+}
+
 /* all of the good styling to make a gradient and nice buttons :) */
 .navbar li a {
   text-decoration: none;
@@ -54,9 +69,22 @@ body {
 /* sets up the container for the different "cards" */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 25%));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 1.5rem;
-  margin: 2rem;
+  margin: 2rem auto;
+
+  max-width: 1600px;
+}
+
+/* media query to make it more flexible and responsive on smaller screens */
+@media (max-width: 768px) {
+  .grid-container {
+    display: block;
+    margin: 20px;
+  }
+  .card {
+    margin: 30px 0px;
+  }
 }
 
 /* this is what styles each "card" */
@@ -103,5 +131,6 @@ body {
   border-radius: 5px;
   padding: 10px;
   margin: 30px 20px;
+  line-height: 50px;
   text-decoration: none; /* removes the underline from the links */
 }
